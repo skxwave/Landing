@@ -1,0 +1,597 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: 'FuturaDemiC';
+	src: url('FuturaDemiC.eot');
+	src: local('Futura Demi Cyrillic'), local('FuturaDemiC'),
+		url('FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+		url('FuturaDemiC.woff') format('woff'),
+		url('FuturaDemiC.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaMediumC';
+	src: url('FuturaMediumC.eot');
+	src: local('Futura Medium Cyrillic'), local('FuturaMediumC'),
+		url('FuturaMediumC.eot?#iefix') format('embedded-opentype'),
+		url('FuturaMediumC.woff') format('woff'),
+		url('FuturaMediumC.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url('FuturaLightC-Italic.eot');
+	src: local('Futura Light Italic Cyrillic'), local('FuturaLightC-Italic'),
+		url('FuturaLightC-Italic.eot?#iefix') format('embedded-opentype'),
+		url('FuturaLightC-Italic.woff') format('woff'),
+		url('FuturaLightC-Italic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FuturaMediumC';
+	src: url('FuturaMediumC-Italic.eot');
+	src: local('Futura Medium Italic Cyrillic'), local('FuturaMediumC-Italic'),
+		url('FuturaMediumC-Italic.eot?#iefix') format('embedded-opentype'),
+		url('FuturaMediumC-Italic.woff') format('woff'),
+		url('FuturaMediumC-Italic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url('FuturaLightC.eot');
+	src: local('Futura Light Cyrillic'), local('FuturaLightC'),
+		url('FuturaLightC.eot?#iefix') format('embedded-opentype'),
+		url('FuturaLightC.woff') format('woff'),
+		url('FuturaLightC.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaDemiC';
+	src: url('FuturaDemiC-Italic.eot');
+	src: local('Futura Demi Italic Cyrillic'), local('FuturaDemiC-Italic'),
+		url('FuturaDemiC-Italic.eot?#iefix') format('embedded-opentype'),
+		url('FuturaDemiC-Italic.woff') format('woff'),
+		url('FuturaDemiC-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FuturaBookC';
+	src: url('FuturaBookC-Italic.eot');
+	src: local('Futura Book Italic Cyrillic'), local('FuturaBookC-Italic'),
+		url('FuturaBookC-Italic.eot?#iefix') format('embedded-opentype'),
+		url('FuturaBookC-Italic.woff') format('woff'),
+		url('FuturaBookC-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FuturaBookC';
+	src: url('FuturaBookC.eot');
+	src: local('Futura Book Cyrillic'), local('FuturaBookC'),
+		url('FuturaBookC.eot?#iefix') format('embedded-opentype'),
+		url('FuturaBookC.woff') format('woff'),
+		url('FuturaBookC.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html{
+	box-sizing: border-box;
+}
+*, *::before, *::after{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: "FuturaLightC";
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: normal;
+	color: white;
+	background-color: black;
+}
+
+.wrapper{
+	max-width: 1102px;
+	margin: 0 auto;
+}
+
+/* Header styles */
+
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.header_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 22px;
+}
+
+.header_list{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header_item{
+	margin-right: 82px;
+}
+.header_item:last-child{
+	margin-right: 0;
+}
+
+.header_link{
+	font-size: 20px;
+	line-height: auto;
+	color: white;
+	text-decoration: none;
+}
+
+.button-1 {
+	background-color: rgba(0, 0, 0, 0);
+	border: 1.5px solid white;
+	border-radius: 45px;
+	color: white;
+	font-family: "FuturaDemiC";
+	font-size: 20px;
+	text-align: center;
+	width: 89px;
+	height: 39px;
+}
+
+/* Header styles end */
+
+/* Start section styles */
+
+.intro{
+	min-height: 100%;
+	background: url(../img/intro-bg.jpg) no-repeat bottom;
+	background-size: cover;
+	padding-top: 375px;
+	margin-bottom: 51px;
+}
+
+.intro-title{
+	font-family: "FuturaDemiC";
+	font-size: 64px;
+	text-align: center;
+	margin-bottom: 28px;
+}
+.intro-subtitle{
+	max-width: 720px;
+	margin: auto;
+	font-family: "FuturaLightC";
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 31px;
+}
+.get_started{
+	background: rgb(255,151,75);
+	background: linear-gradient(150deg, rgba(255,151,75,1) 0%, rgba(255,214,0,1) 100%);
+	border: none;
+	border-radius: 45px;
+	box-sizing: border-box;
+	color: black;
+	font-family: "FuturaDemiC";
+	font-size: 32px;
+	text-align: center;
+	width: 274px;
+	height: 70px;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 325px;
+}
+.arrow-down{
+	margin: 0 auto;
+	display: block;
+}
+
+/* Start section styles end */
+
+/* About section */
+
+.about-title{
+	font-family: "FuturaDemiC";
+	font-size: 64px;
+	text-align: center;
+	margin-bottom: 51px;
+}
+
+.about-grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 55px;
+	grid-template-areas:
+    "a b"
+    "c d";
+	margin-bottom: 180px;
+}
+
+.about-grid-item1{
+	grid-area: a;
+	align-self: center;
+}
+.about-grid-item2{
+	grid-area: b;
+	align-self: center;
+}
+.about-grid-item3{
+	grid-area: c;
+	align-self: center;
+}
+.about-grid-item4{
+	grid-area: d;
+	align-self: center;
+}
+
+.about-text-title{
+	font-family: "FuturaDemiC";
+	font-size: 48px;
+	margin-bottom: 16px;
+}
+
+.about-text-subtitle{
+	font-family: "FuturaBookC";
+	font-size: 24px;
+	margin-bottom: 50px;
+}
+.about-text-subtitle:last-child{
+	margin-bottom: 0;
+}
+
+.about-pic{
+	border-radius: 25px;
+	box-shadow: 0px 0px 25px rgb(255, 151, 75, 25%);
+}
+
+/* About section end */
+
+/* How-to section */
+
+.how-to_block{
+	background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%), #D9D9D9;
+	border-radius: 45px;
+	margin-bottom: 180px;
+}
+
+.how-to_title{
+	font-family: "FuturaDemiC";
+	font-size: 64px;
+	color: black;
+	text-align: center;
+	padding-top: 83px;
+	margin-bottom: 15px;
+}
+
+.how-to_line{
+	width: 25%;
+	height: 2px;
+	border: none;
+	text-align: center;
+	color: black;
+	background-color: black;
+	margin-bottom: 16px;
+}
+
+.how-to_subtitle{
+	font-family: "FuturaBookC";
+	font-size: 36px;
+	color: black;
+	max-width: 532px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 52px;
+}
+
+.how-to_learn-more{
+	background-color: transparent;
+	border: 2px solid black;
+	border-radius: 45px;
+	color: black;
+	font-family: "FuturaBookC";
+	font-size: 32px;
+	text-align: center;
+	width: 206px;
+	height: 64px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 52px;
+}
+
+.how-to_pic{
+	border-radius: 20px 20px 0px 0px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* How-to section end */
+
+/* Responses section */
+
+.responses-title{
+	font-family: "FuturaDemiC";
+	font-size: 64px;
+	color: white;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.responses-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 41px;
+	grid-template-areas: "a b c";
+	margin-bottom: 180px;
+}
+
+.responses-card{
+	background-color: white;
+	border-radius: 45px;
+	max-width: 340px;
+}
+
+.responses-img{
+	border-radius: 72.5px;
+	padding-top: 40px;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 18px;
+}
+
+.response-name{
+	font-family: "FuturaDemiC";
+	font-size: 36px;
+	color: black;
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.response-text{
+	font-family: "FuturaBookC";
+	font-size: 32px;
+	color: black;
+	max-width: 254px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+/* Responses section end */
+
+/* Action section */
+
+.action-block{
+	background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%), #D9D9D9;
+	border-radius: 45px 45px 0px 0px;
+	padding-bottom: 90px;
+}
+
+.action-title{
+	font-family: "FuturaDemiC";
+	font-size: 64px;
+	color: black;
+	text-align: center;
+	padding-top: 80px;
+	margin-bottom: 18px;
+}
+
+.action_line{
+	width: 15%;
+	height: 2px;
+	border: none;
+	text-align: center;
+	color: black;
+	background-color: black;
+	margin-bottom: 60px;
+}
+
+.action-grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 41px;
+	grid-template-areas:
+    "a b"
+    "c d";
+	max-width: 803px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.action-grid-item1{
+	grid-area: a;
+	align-self: center;
+}
+.action-grid-item2{
+	grid-area: b;
+	align-self: center;
+}
+.action-grid-item3{
+	grid-area: c;
+	align-self: center;
+}
+.action-grid-item4{
+	grid-area: d;
+	align-self: center;
+}
+
+.action-text{
+	font-family: "FuturaDemiC";
+	font-size: 36px;
+	color: black;
+	text-align: left;
+	margin-bottom: 18px;
+}
+
+.action-subtext{
+	font-family: "FuturaBookC";
+	font-size: 36px;
+	color: black;
+	text-align: left;
+	margin-bottom: 18px;
+}
+
+.action-download{
+	background: rgb(255,151,75);
+	background: linear-gradient(150deg, rgba(255,151,75,1) 0%, rgba(255,214,0,1) 100%);
+	border: none;
+	border-radius: 45px;
+	box-sizing: border-box;
+	color: black;
+	font-family: "FuturaDemiC";
+	font-size: 36px;
+	text-align: center;
+	min-width: 381px;
+	min-height: 92px;
+	margin: 0 auto;
+	display: block;
+}
+
+.action-learnmore{
+	background: transparent;
+	border: 2px solid black;
+	border-radius: 45px;
+	box-sizing: border-box;
+	color: black;
+	font-family: "FuturaDemiC";
+	font-size: 36px;
+	text-align: center;
+	min-width: 381px;
+	min-height: 92px;
+	margin: 0 auto;
+	display: block;
+}
+
+/* Action section end */
+
+/* Footer section */
+
+.footer-bg{
+	background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%), #D9D9D9;
+}
+
+.footer-main{
+	background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%);
+	border-radius: 25px 25px 0px 0px;
+	line-height: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.footer-wrapper{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "a b c";
+	max-width: 1052px;
+}
+
+.footer-logo{
+	grid-area: a;
+	align-self: center;
+	justify-self: start;
+}
+
+.footer-text{
+	grid-area: b;
+	font-family: "FuturaBookC";
+	font-size: 20px;
+	color: black;
+	align-self: center;
+	justify-self: center;
+}
+
+.footer-social{
+	grid-area: c;
+	align-self: center;
+	justify-self: end;
+}
+
+.footer_list{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer_item{
+	margin-right: 24px;
+}
+.footer_item:last-child{
+	margin-right: 0;
+}
+
+.footer_link{
+	font-size: 20px;
+	line-height: auto;
+	color: white;
+	text-decoration: none;
+}
+
+/* Footer section end */
