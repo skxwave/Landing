@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ableton 13</title>
-    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
                     </a>
                 </div>
     
-                <nav class="header_nav">
+                <nav class="header_nav desktop">
                     <ul class="header_list">
                         <li class="header_item">
                             <a href="#!" class="header_link">About</a>
@@ -33,9 +33,13 @@
                     </ul>
                 </nav>
 
-                <nav class="header_nav">
+                <div class="header_nav desktop">
                     <button class="button-1" role="button">More</button>
-                </nav>
+                </div>
+
+                <div class="header_nav mobile">
+                    <button class="button-1" role="button"><img src="img/svg/burger-menu.svg" alt="Menu"></button>
+                </div>
             </div>
         </div>
     </header>
@@ -47,7 +51,7 @@
         <section class="intro">
             <div class="wrapper">
                 <h1 class="intro-title">
-                    Create music <span style="color: #FFD600"> together</span>
+                    Create music <span> together</span>
                 </h1>
                 <p class="intro-subtitle">
                     Connect with other producers, share your projects, work wherever you want
@@ -65,24 +69,32 @@
                     Introducing Ableton 13
                 </h2>
                 <div class="about-grid">
-                    <div class="about-grid-item1">
-                        <h3 class="about-text-title">All in one space</h3>
-                        <p class="about-text-subtitle">Create, connect, and collaborate with ease, all within one integrated platform.</p>
-                        <h3 class="about-text-title">Easy to use</h3>
-                        <p class="about-text-subtitle">Simplify your creative process with our intuitive platform, designed for seamless collaboration.</p>
+                    <div class="about-row">
+                        <div class="about-text">
+                            <h3 class="about-text-title">All in one space</h3>
+                            <p class="about-text-subtitle">Create, connect, and collaborate with ease, all within one integrated platform.</p>
+                            <h3 class="about-text-title">Easy to use</h3>
+                            <p class="about-text-subtitle">Simplify your creative process with our intuitive platform, designed for seamless collaboration.</p>
+                        </div>
+                        <div class="about-img">
+                            <img src="./img/about-pic1.png" alt="" class="about-pic">
+                            <img src="./img/about-pic1-mobile.png" alt="" class="about-pic mobile">
+                        </div>
                     </div>
-                    <div class="about-grid-item2">
-                        <img src="./img/about-pic1.png" alt="" class="about-pic">
+                    
+                    <div class="about-row">
+                        <div class="about-img-child">
+                            <img src="./img/about-pic2.png" alt="" class="about-pic">
+                            <img src="./img/about-pic2-mobile.png" alt="" class="about-pic mobile">
+                        </div>
+                        <div class="about-text-child">
+                            <h3 class="about-text-title">Connect and create</h3>
+                            <p class="about-text-subtitle">The easiest way to make music together even when you on distance. Stay in touch.</p>
+                            <h3 class="about-text-title">Up to 4 users</h3>
+                            <p class="about-text-subtitle">Seamlessly connect with collaborators worldwide and unleash your creativity.</p>
+                        </div>
                     </div>
-                    <div class="about-grid-item3">
-                        <img src="./img/about-pic1.png" alt="" class="about-pic">
-                    </div>
-                    <div class="about-grid-item4">
-                        <h3 class="about-text-title">All in one space</h3>
-                        <p class="about-text-subtitle">Create, connect, and collaborate with ease, all within one integrated platform.</p>
-                        <h3 class="about-text-title">Easy to use</h3>
-                        <p class="about-text-subtitle">Simplify your creative process with our intuitive platform, designed for seamless collaboration.</p>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -134,25 +146,27 @@
                     <h2 class="action-title">Try it now!</h2>
                     <hr class="action_line">
                     <div class="action-grid">
-
-                        <div class="action-grid-item1">
-                            <h3 class="action-text">Free trial</h3>
-                            <p class="action-subtext">You can try our product and start 1month free trial right now!</p>
+                        <div class="action-row">
+                            <div class="action-content">
+                                <h3 class="action-text">Free trial</h3>
+                                <p class="action-subtext">You can try our product and start 1month free trial right now!</p>
+                            </div>
+                                
+                            <div class="action-button">
+                                <button class="action-download">Download</button>
+                            </div>
                         </div>
-                            
-                        <div class="action-grid-item2">
-                            <button class="action-download">Download</button>
+                        
+                        <div class="action-row">
+                            <div class="action-content">
+                                <h3 class="action-text">Learn more</h3>
+                                <p class="action-subtext">Check our website for more information, other products, tutorials</p>
+                            </div>
+                                
+                            <div class="action-button">
+                                <button class="action-learnmore">Learn More</button>
+                            </div>
                         </div>
-                            
-                        <div class="action-grid-item3">
-                            <h3 class="action-text">Learn more</h3>
-                            <p class="action-subtext">Check our website for more information, other products, tutorials</p>
-                        </div>
-                            
-                        <div class="action-grid-item4">
-                            <button class="action-learnmore">Learn More</button>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -167,32 +181,24 @@
                         <div class="footer-wrapper">
                             <div class="footer_logo">
                                 <a href="/" class="footer_logo-link">
-                                    <img src="./img/svg/ableton-logo-black.svg" alt="Create music together" class="header_logo-pic">
+                                    <img src="./img/svg/ableton-logo-black.svg" alt="Create music together" class="footer_logo-pic">
                                 </a>
                             </div>
-    
-                            <p class="footer-text">All rights reserved</p>
+
+                            <div class="footer-text">
+                                <p class="footer-text-element">All rights reserved</p>
+                            </div>
                             
                             <div class="footer-social">
-                                <nav class="footer_nav">
-                                    <ul class="footer_list">
-                                        <li class="footer_item">
-                                            <a href="#!" class="footer_link">
-                                                <img src="./img/svg/instagram-ico.svg" alt="Create music together" class="header_logo-pic">
-                                            </a>
-                                        </li>
-                                        <li class="footer_item">
-                                            <a href="#!" class="footer_link">
-                                                <img src="./img/svg/linkedin-ico.svg" alt="Create music together" class="header_logo-pic">
-                                            </a>
-                                        </li>
-                                        <li class="footer_item">
-                                            <a href="#!" class="footer_link">
-                                                <img src="./img/svg/github-ico.svg" alt="Create music together" class="header_logo-pic">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                <a href="" class="instagram-link">
+                                    <img src="img/svg/instagram-ico.svg" alt="" class="footer-social-pic">
+                                </a>
+                                <a href="" class="linkedin-link">
+                                    <img src="img/svg/linkedin-ico.svg" alt="" class="footer-social-pic">
+                                </a>
+                                <a href="" class="github-link">
+                                    <img src="img/svg/github-ico.svg" alt="" class="footer-social-pic">
+                                </a>
                             </div>
                         </div>
                     </div>

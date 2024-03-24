@@ -206,7 +206,9 @@ body{
 	width: 89px;
 	height: 39px;
 }
-
+.header_nav.mobile{
+	display: none;
+}
 /* Header styles end */
 
 /* Start section styles */
@@ -225,6 +227,7 @@ body{
 	text-align: center;
 	margin-bottom: 28px;
 }
+.intro-title span{color: #FFD600}
 .intro-subtitle{
 	max-width: 720px;
 	margin: auto;
@@ -267,29 +270,16 @@ body{
 
 .about-grid{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 55px;
-	grid-template-areas:
-    "a b"
-    "c d";
+	grid-template-rows: 1fr 1fr;
+	gap: 59px;
 	margin-bottom: 180px;
 }
 
-.about-grid-item1{
-	grid-area: a;
-	align-self: center;
-}
-.about-grid-item2{
-	grid-area: b;
-	align-self: center;
-}
-.about-grid-item3{
-	grid-area: c;
-	align-self: center;
-}
-.about-grid-item4{
-	grid-area: d;
-	align-self: center;
+.about-row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 40px
 }
 
 .about-text-title{
@@ -306,10 +296,16 @@ body{
 .about-text-subtitle:last-child{
 	margin-bottom: 0;
 }
-
 .about-pic{
+	width: 100%;
+	max-width: 530px;
+	height: 100%;
 	border-radius: 25px;
 	box-shadow: 0px 0px 25px rgb(255, 151, 75, 25%);
+}
+
+.about-pic.mobile{
+	display: none;
 }
 
 /* About section end */
@@ -368,6 +364,9 @@ body{
 
 .how-to_pic{
 	border-radius: 20px 20px 0px 0px;
+	max-width: 720px;
+	width: 100%;
+	height: 100%;
 	display: block;
 	margin: 0 auto;
 }
@@ -386,9 +385,8 @@ body{
 
 .responses-grid{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 41px;
-	grid-template-areas: "a b c";
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 40px;
 	margin-bottom: 180px;
 }
 
@@ -400,9 +398,9 @@ body{
 
 .responses-img{
 	border-radius: 72.5px;
-	padding-top: 40px;
-	display: flex;
+	display: block;
 	margin: 0 auto;
+	margin-top: 40px;
 	margin-bottom: 18px;
 }
 
@@ -455,31 +453,21 @@ body{
 
 .action-grid{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 41px;
-	grid-template-areas:
-    "a b"
-    "c d";
-	max-width: 803px;
+	gap: 60px;
+	grid-template-rows: 1fr 1fr;
 	justify-content: center;
+	align-items: center;
+	max-width: 800px;
 	margin: 0 auto;
 }
 
-.action-grid-item1{
-	grid-area: a;
-	align-self: center;
-}
-.action-grid-item2{
-	grid-area: b;
-	align-self: center;
-}
-.action-grid-item3{
-	grid-area: c;
-	align-self: center;
-}
-.action-grid-item4{
-	grid-area: d;
-	align-self: center;
+.action-row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	margin: 0 auto;
 }
 
 .action-text{
@@ -495,7 +483,6 @@ body{
 	font-size: 36px;
 	color: black;
 	text-align: left;
-	margin-bottom: 18px;
 }
 
 .action-download{
@@ -508,7 +495,8 @@ body{
 	font-family: "FuturaDemiC";
 	font-size: 36px;
 	text-align: center;
-	min-width: 381px;
+	max-width: 381px;
+	width: 100%;
 	min-height: 92px;
 	margin: 0 auto;
 	display: block;
@@ -523,7 +511,8 @@ body{
 	font-family: "FuturaDemiC";
 	font-size: 36px;
 	text-align: center;
-	min-width: 381px;
+	max-width: 381px;
+	width: 100%;
 	min-height: 92px;
 	margin: 0 auto;
 	display: block;
@@ -549,19 +538,11 @@ body{
 
 .footer-wrapper{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-areas: "a b c";
+	grid-template-columns: 1fr 1fr 1fr;
 	max-width: 1052px;
 }
 
-.footer-logo{
-	grid-area: a;
-	align-self: center;
-	justify-self: start;
-}
-
 .footer-text{
-	grid-area: b;
 	font-family: "FuturaBookC";
 	font-size: 20px;
 	color: black;
@@ -570,28 +551,278 @@ body{
 }
 
 .footer-social{
-	grid-area: c;
 	align-self: center;
-	justify-self: end;
-}
-
-.footer_list{
+	justify-content: end;
 	display: flex;
-	flex-wrap: wrap;
-}
-
-.footer_item{
-	margin-right: 24px;
-}
-.footer_item:last-child{
-	margin-right: 0;
-}
-
-.footer_link{
-	font-size: 20px;
-	line-height: auto;
-	color: white;
-	text-decoration: none;
+	flex-flow: row;
+	gap: 24px
 }
 
 /* Footer section end */
+
+@media(max-width:1024px){
+	.wrapper{
+		max-width: 920px;
+		margin: 0 auto;
+	}
+	.responses-grid{
+		gap: 20px;
+	}
+}
+
+@media(max-width:550px){
+	.wrapper{
+		max-width: 335px;
+		margin: 0 auto;
+	}
+	.header_nav.mobile{
+		display: block;
+	}
+	.button-1 {
+		background-color: transparent;
+		border: none;
+		width: auto;
+		height: auto;
+	}
+	.header_nav.desktop{
+		display: none;
+	}
+
+	/* Intro Mobile */
+
+	.intro{
+		background: url(../img/intro-bg-mobile.jpg) no-repeat bottom;
+		background-size: cover;
+		padding-top: 375px;
+		margin-bottom: 51px;
+	}
+	
+	.intro-title{
+		font-size: 48px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.intro-subtitle{
+		font-size: 20px;
+		text-align: left;
+		margin-bottom: 55px;
+	}
+	.get_started{
+		font-size: 24px;
+		/* text-align: center; */
+		width: 217px;
+		height: 53px;
+		
+		margin-bottom: 325px;
+	}
+	.arrow-down{
+		margin: 0 auto;
+		display: block;
+	}
+
+	/* About Mobile */
+
+	.about-title{
+		font-size: 40px;
+		margin-bottom: 33px;
+	}
+	.about-grid{
+		display: grid;
+		grid-template-rows: 1fr;
+		gap: 33px;
+		margin-bottom: 60px;
+	}
+	.about-row{
+		display: flex;
+		flex-flow: column-reverse;
+		gap: 40px
+	}
+	.about-row:last-child{
+		flex-flow: column;
+	}
+	.about-text-title{
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	.about-text-subtitle{
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+	.about-text-subtitle:last-child{
+		margin-bottom: 0;
+	}
+	.about-pic{
+		display: none;
+	}
+	.about-pic.mobile{
+		display: block;
+	}
+
+	/* How To Mobile */
+
+	.how-to_block{
+		background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%), #D9D9D9;
+		border-radius: 45px;
+		margin-bottom: 60px;
+	}
+	
+	.how-to_title{
+		font-family: "FuturaDemiC";
+		font-size: 40px;
+		color: black;
+		max-width: 217px;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 83px;
+		margin-bottom: 23px;
+	}
+	
+	.how-to_line{
+		width: 25%;
+		height: 2px;
+		border: none;
+		text-align: center;
+		color: black;
+		background-color: black;
+		margin-bottom: 26px;
+	}
+	
+	.how-to_subtitle{
+		font-family: "FuturaBookC";
+		font-size: 20px;
+		color: black;
+		max-width: 217px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 57px;
+	}
+	
+	.how-to_learn-more{
+		border: 1px solid black;
+		font-size: 20px;
+		width: 140px;
+		height: 46px;
+		margin-bottom: 56px;
+	}
+
+	.how-to_pic{
+		max-width: 250px;
+		max-height: 110px;
+	}
+
+	/* Responses Mobile */
+
+	.responses-title{
+		font-size: 40px;
+		margin-bottom: 23px;
+	}
+	
+	.responses-grid{
+		display: flex;
+		flex-flow: column;
+		gap: 15px;
+		flex-flow: row wrap;
+		margin-bottom: 60px;
+	}
+	
+	.responses-card{
+		display: grid;
+		grid-template-columns: 25% 75%;
+		align-items: center;
+		gap: 10px;
+		padding: 10px;
+		background-color: white;
+		border-radius: 30px;
+		max-width: 340px;
+		min-height: 100px;
+	}
+	
+	.responses-img{
+		border-radius: 20px;
+		padding-top: 0;
+		display: flex;
+		width: 62px;
+		height: 62px;
+		margin: 0 auto;
+		margin-bottom: 0;
+	}
+	
+	.response-name{
+		display: none;
+	}
+	
+	.response-text{
+		font-size: 15px;
+		max-width: 254px;
+		text-align: left;
+		padding-right: 15px;
+		margin: 0 auto;
+		margin-bottom: 0;
+	}
+	
+	/* Action Mobile */
+
+	.action-title{
+		font-size: 40px;
+	}
+	.action-grid{
+		max-width: 257px;
+		gap: 60px;
+	}
+	.action-row{
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: none;
+		gap: 23px;
+	}
+	.action-text{
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+	
+	.action-subtext{
+		font-size: 20px;
+		text-align: center;
+	}
+	
+	.action-download{
+		font-size: 24px;
+		min-width: 217px;
+		min-height: 54px;
+	}
+	
+	.action-learnmore{
+		border: 1px solid black;
+		font-size: 24px;
+		min-width: 217px;
+		min-height: 54px;
+	}
+
+	/* Footer Mobile */
+	
+	.footer-text{
+		font-family: "FuturaBookC";
+		font-size: 12px;
+		color: black;
+		align-self: center;
+		justify-self: center;
+	}
+	
+	.footer-social{
+		align-self: center;
+		justify-content: end;
+		display: flex;
+		flex-flow: row;
+		gap: 10px
+	}
+
+	.footer-social-pic{
+		width: 15px;
+		height: 15px;
+	}
+
+	.footer_logo-pic{
+		width: 20px;
+		height: 20px;
+	}
+}
