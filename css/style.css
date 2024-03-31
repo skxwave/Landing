@@ -501,6 +501,13 @@ body{
 	margin: 0 auto;
 	display: block;
 }
+.action-download:hover{
+	cursor: pointer;
+}
+
+.link{
+	text-decoration: none;
+}
 
 .action-learnmore{
 	background: transparent;
@@ -593,7 +600,7 @@ body{
 	.intro{
 		background: url(../img/intro-bg-mobile.jpg) no-repeat bottom;
 		background-size: cover;
-		padding-top: 375px;
+		padding-top: 250px;
 		margin-bottom: 51px;
 	}
 	
@@ -605,15 +612,16 @@ body{
 	.intro-subtitle{
 		font-size: 20px;
 		text-align: left;
+		max-width: 290px;
+		margin: 0;
 		margin-bottom: 55px;
 	}
 	.get_started{
 		font-size: 24px;
-		/* text-align: center; */
 		width: 217px;
 		height: 53px;
 		
-		margin-bottom: 325px;
+		margin-bottom: 212px;
 	}
 	.arrow-down{
 		margin: 0 auto;
@@ -764,15 +772,19 @@ body{
 
 	.action-title{
 		font-size: 40px;
+		margin-bottom: 8px;
+	}
+	.action_line{
+		margin-bottom: 50px;
 	}
 	.action-grid{
 		max-width: 257px;
-		gap: 60px;
+		gap: 50px;
 	}
 	.action-row{
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: none;
-		gap: 23px;
+		display: flex;
+		flex-flow: column;
+		gap: 20px;
 	}
 	.action-text{
 		font-size: 24px;
@@ -824,5 +836,140 @@ body{
 	.footer_logo-pic{
 		width: 20px;
 		height: 20px;
+	}
+}
+
+/* Download page */
+
+.intro-download{
+	padding-top: 220px;
+}
+
+.download_block{
+	background: linear-gradient(117.63deg, rgba(0, 255, 194, 0.3) 0%, rgba(0, 255, 194, 0) 99.51%), linear-gradient(242.03deg, rgba(251, 255, 75, 0.3) 0%, rgba(251, 255, 75, 0) 100%), #D9D9D9;
+	border-radius: 45px;
+	margin-bottom: 150px;
+}
+
+.intro-title.download{
+	color: black;
+	padding-top: 167px;
+}
+.intro-subtitle.download{
+	color: black;
+	font-family: "FuturaBookC";
+	font-size: 36px;
+	margin-bottom: 72px;
+}
+.download-buttons{
+	display: flex;
+	justify-content: center;
+	gap: 175px;
+	padding-bottom: 167px;
+}
+.download-button{
+	height: 60px;
+	width: 205px;
+	border-radius: 45px;
+	background-color: transparent;
+	font-family: "FuturaBookC";
+	font-size: 36px;
+}
+
+.info-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	margin-bottom: 100px;
+}
+.info-block-title{
+	font-family: "FuturaDemiC";
+	font-size: 48px;
+	margin-bottom: 16px;
+}
+.info-block-title.lower{
+	font-size: 32px;
+}
+.info-block-text{
+	font-family: "FuturaBookC";
+	font-size: 24px;
+}
+.info-title{
+	display: flex;
+	justify-content: center;
+	font-family: "FuturaDemiC";
+	font-size: 48px;
+	margin-bottom: 40px;
+}
+
+
+
+
+
+.footer-bg.download{
+	border-radius: 25px 25px 0px 0px;
+}
+
+@media(max-width: 550px){
+	/* Download Page Mobile */
+
+	.intro-download{
+		padding-top: 100px;
+	}
+	
+	.download_block{
+		margin-bottom: 100px;
+	}
+	
+	.intro-title.download{
+		text-align: center;
+		margin: auto;
+		max-width: 257px;
+		padding-top: 157px;
+		margin-bottom: 26px;
+	}
+	.intro-subtitle.download{
+		max-width: 257px;
+		font-family: "FuturaBookC";
+		font-size: 20px;
+		margin: auto;
+		margin-bottom: 82px;
+		text-align: center;
+	}
+	.download-buttons{
+		gap: 19px;
+		padding-bottom: 157px;
+	}
+	.download-button{
+		height: 35px;
+		width: 120px;
+		font-size: 20px;
+	}
+	
+	.info-grid{
+		display: flex;
+		flex-flow: column;
+		gap: 50px;
+		margin-bottom: 50px;
+	}
+	.info-block-title{
+		font-family: "FuturaDemiC";
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	.info-block-title.lower{
+		font-size: 24px;
+	}
+	.info-block-text{
+		font-family: "FuturaBookC";
+		font-size: 16px;
+	}
+	.info-title{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		font-family: "FuturaDemiC";
+		font-size: 40px;
+		margin-bottom: 20px;
 	}
 }
